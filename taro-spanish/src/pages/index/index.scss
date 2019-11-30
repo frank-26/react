@@ -1,0 +1,16 @@
+.home {
+  display: block;
+  background: #ffe564;
+  height: 100vh;
+
+  .book {
+    background: #1890ff;
+    opacity: 0.6;
+    border-radius: 50%;
+    box-sizing: border-box;
+    width: 200px;
+    height: 200px;
+    line-height: 7;
+    text-align: center;
+  }
+}
