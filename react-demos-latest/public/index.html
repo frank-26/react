@@ -9,11 +9,30 @@
   <meta name="description" content="Web site created using create-react-app" />
 
   <title>%REACT_APP_DESC%</title>
+  <style>
+    #modal-root {
+      position: relative;
+      z-index: 999;
+    }
+
+    .modal {
+      background-color: rgba(0, 0, 0, 0.5);
+      position: fixed;
+      height: 100%;
+      width: 100%;
+      top: 0;
+      left: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+  </style>
 </head>
 
 <body>
   <noscript>You need to enable JavaScript to run this app.</noscript>
   <div id="root"></div>
+  <div id="modal-root"></div>
 </body>
 
 </html>

@@ -6,6 +6,11 @@ import { ErrorBoundary } from './ErrorBoundary';
 import { Context } from './Context';
 import { ForwardingRefs } from './ForwardingRefs';
 import { HOC } from './HOC';
+import { OptimizingPerformance } from './OptimizingPerformance';
+import { Portals } from './Portals';
+import { Reconciliation } from './Reconciliation';
+import { RenderProps } from './RenderProps';
+import { Uncontrolled } from './Uncontrolled';
 
 export function Advanced() {
   return (
@@ -13,6 +18,21 @@ export function Advanced() {
       <nav>
         <h3>ADVANCED GUIDES</h3>
         <ul>
+          <li>
+            <Link to="/Uncontrolled">Uncontrolled</Link>
+          </li>
+          <li>
+            <Link to="/RenderProps">RenderProps</Link>
+          </li>
+          <li>
+            <Link to="/Reconciliation">Reconciliation</Link>
+          </li>
+          <li>
+            <Link to="/Portals">Portals</Link>
+          </li>
+          <li>
+            <Link to="/OptimizingPerformance">OptimizingPerformance</Link>
+          </li>
           <li>
             <Link to="/HOC">HOC</Link>
           </li>
@@ -32,6 +52,21 @@ export function Advanced() {
       </nav>
 
       <Switch>
+        <Route path="/Uncontrolled">
+          <Uncontrolled />
+        </Route>
+        <Route path="/RenderProps">
+          <RenderProps />
+        </Route>
+        <Route path="/Reconciliation">
+          <Reconciliation />
+        </Route>
+        <Route path="/Portals">
+          <Portals />
+        </Route>
+        <Route path="/OptimizingPerformance">
+          <OptimizingPerformance />
+        </Route>
         <Route path="/HOC">
           <HOC />
         </Route>
