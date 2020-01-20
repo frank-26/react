@@ -154,7 +154,7 @@ function TextInputWithFocusButton() {
   );
 }
 // useImperativeHandle TODO:
-function FancyInput(props, ref) {
+const FancyInput = forwardRef((props, ref) => {
   const inputRef = useRef();
   useImperativeHandle(ref, () => ({
     focus: () => {
@@ -162,8 +162,7 @@ function FancyInput(props, ref) {
     }
   }));
   return <input ref={inputRef} />;
-}
-FancyInput = forwardRef(FancyInput);
+})
 
 // TODO: useCallback
 // TODO: useMemo
