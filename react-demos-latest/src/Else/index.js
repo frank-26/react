@@ -1,20 +1,7 @@
-import React ,{useState} from 'react';
-import { Switch, Route, Link } from 'react-router-dom';
-import Rodal from 'rodal';
-
-import 'rodal/lib/rodal.css';
-
-function Demo() {
- const [visible, setVisible] = useState(false)
- return  <div>
-          <button onClick={()=>setVisible(true)}>show</button>
-
-          <Rodal visible={visible} onClose={()=>setVisible(false)}>
-              <div>Content</div>
-          </Rodal>
-        </div>
-    
-}
+import React from 'react';
+import {Switch, Route, Link} from 'react-router-dom';
+import {Animation} from './Animation';
+import {LifeCycle} from './LifeCycle';
 
 export function Else() {
   return (
@@ -23,14 +10,20 @@ export function Else() {
         <h3>Else</h3>
         <ul>
           <li>
-            <Link to="/Rodal">Rodal-animation</Link>
+            <Link to="/Animation">Animation-animation</Link>
+          </li>
+          <li>
+            <Link to="/LifeCycle">LifeCycle</Link>
           </li>
         </ul>
       </nav>
 
       <Switch>
-        <Route path="/Rodal">
-          <Demo />
+        <Route path="/Animation">
+          <Animation/>
+        </Route>
+        <Route path="/LifeCycle">
+          <LifeCycle/>
         </Route>
       </Switch>
     </div>
